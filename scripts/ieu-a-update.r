@@ -19,7 +19,6 @@ add_ontology <- function(id, ont)
 {
 	a <- api_query(paste0("gwasinfo/", id)) %>% httr::content() %>% {.[[1]]}
 	a$ontology <- ont
-	a$group_name <- "public"
 	b <- api_query(paste0("edit/edit"), query=a) %>% httr::content()
 	bind_rows(as_tibble(a), as_tibble(b)) %>% apply(., 2, function(x) all(x[1]==x)) %>% all %>% print
 }
@@ -34,14 +33,4 @@ for(id in ids)
 	paste(., collapse=";") %>%
 	add_ontology(id=id, ont=.)
 }
-
-
-
-
-ao2 <- gwasinfo() %>% filter(grepl("ieu-a-", id))
-
-ao2$ontology
-
-ao3 <- gwasinfo(access_token=NULL) %>% filter(grepl("ieu-a-", id))
-nrow(ao3)
 
