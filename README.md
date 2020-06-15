@@ -4,6 +4,9 @@ There have been a few attempts to map ontologies to each dataset in OpenGWAS. Tr
 
 ## Ontologies
 
+Manual mapping done here: https://docs.google.com/spreadsheets/d/1SskkWvx4t5TsPF288aNFXNKqMPLZocb52sVZfQd8gKo/edit?usp=sharing
+
+
 ### Useful links
 
 - Ontology lookup service (OLS): https://www.ebi.ac.uk/ols/index
