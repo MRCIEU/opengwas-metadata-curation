@@ -55,3 +55,7 @@ o <- mclapply(d, function(x)
 }) %>% bind_rows()
 save(o, file="ukb-b_units.rdata")
 ```
+
+### Vectology
+
+A first pass attempt using BioSentVec and EFO was done as part of the EpiGraphDB build. The scripts for this need tidying up, but i've put the file in the data folder `gwas-vec-efo-ids-0.7.tsv`
