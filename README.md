@@ -1,9 +1,10 @@
-# Adding ontology mappings to OpenGWAS
+# Curating metadata in OpenGWAS
 
 There have been a few attempts to map ontologies to each dataset in OpenGWAS. Try to collect them here, though some might have been lost when UoB migrated from Google to Microsoft.
 
+## Ontologies
 
-## Useful links
+### Useful links
 
 - Ontology lookup service (OLS): https://www.ebi.ac.uk/ols/index
 - API for OLS: https://www.ebi.ac.uk/ols/docs/api
@@ -16,19 +17,12 @@ To obtain the meta data for an ontological term:
 curl -L 'http://www.ebi.ac.uk/ols/api/terms?id=MONDO_0002009' -i -H 'Accept: application/json'
 ```
 
-
-## Mapping `ieu-a` to EFO terms
-
+### Mapping `ieu-a` to EFO terms
 
 
 
 
-
-
-
-
-
-## Common EFO terms
+### Common EFO terms
 
 ```
 EFO:0009374 energy intake measurement
@@ -40,10 +34,12 @@ EFO:0004731 eye measurement
 ```
 
 
+
+
 ## Getting SD for ukb-b
 
 ```
-ibrary(parallel)
+library(parallel)
 library(data.table)
 library(dplyr)
 setwd("/mnt/storage/private/mrcieu/research/mr-eve/UKBB_replication/replication/results")

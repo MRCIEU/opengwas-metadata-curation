@@ -1,0 +1,6 @@
+library(ieugwasr)
+ieugwasr::select_api("dev1")
+ieugwasr::get_access_token()
+library(dplyr)
+library(jsonlite)
+library(httr)
