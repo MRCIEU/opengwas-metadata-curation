@@ -22,6 +22,7 @@ sheets = {}
 
 for id in sheet_ids.keys():
     res = getspreadsheet(sheet_ids[id], "assigned_traits")
+    res.to_csv(f"../tmp/{id}.csv")
     sheets[id] = res
 
 column_labels = ["Exact", "Broad", "Narrow", "Inad", "Inex", "non-EFO"]
