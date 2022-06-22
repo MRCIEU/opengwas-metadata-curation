@@ -26,6 +26,16 @@ for id in sheet_ids.keys():
 
 column_labels = ["Exact", "Broad", "Narrow", "Inad", "Inex", "non-EFO"]
 
+for person in sheet_ids.keys():
+    print(f"Person: {person}\n==================")
+    summary = person_summary(sheets[person])
+    print(
+        pd.DataFrame(summary, columns=column_labels, index=["Auto1", "Auto2", "Auto3"])
+    )
+    print("=============================================\n")
+
+print("\n\n")
+
 for pair in pairs:
     print(f"Pair: {pair[0]}, {pair[1]}\n=========================")
     tool1, tool2, tool3 = pair_compare(sheets[pair[0]], sheets[pair[1]])

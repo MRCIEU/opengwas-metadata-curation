@@ -123,3 +123,21 @@ def person_summary(mappingdf):
     """
     Summarise the results from one person
     """
+    targetcolumns = {
+        "exact mapping": 0,
+        "broad mapping": 1,
+        "narrow mapping": 2,
+        "inadequate": 3,
+        "incorrect": 4,
+        "Exact non-EFO": 5,
+    }
+    sourcecolumns = {"Identifier1": 0, "Identifier2": 1, "Identifier3": 1}
+    result = np.zeros((3, 6))
+    for index, row in mappingdf.iterrows():
+        for targetcolumn in targetcolumns.keys():
+            for sourcecolumn in sourcecolumns.keys():
+                if row[sourcecolumn][0] in row[targetcolumn]:
+                    result[
+                        sourcecolumns[sourcecolumn], targetcolumns[targetcolumn]
+                    ] += 1
+    return result
