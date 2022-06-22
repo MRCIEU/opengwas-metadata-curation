@@ -131,7 +131,7 @@ def person_summary(mappingdf):
         "incorrect": 4,
         "Exact non-EFO": 5,
     }
-    sourcecolumns = {"Identifier1": 0, "Identifier2": 1, "Identifier3": 1}
+    sourcecolumns = {"Identifier1": 0, "Identifier2": 1, "Identifier3": 2}
     result = np.zeros((3, 6))
     for index, row in mappingdf.iterrows():
         for targetcolumn in targetcolumns.keys():
